@@ -1,0 +1,18 @@
+﻿using Cursus_Data.Models.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Cursus_Data.Repositories.Interfaces
+{
+    public interface ICourseContentRepository
+    {
+        Task AddCourseContentAsync(CourseContent courseContent);
+        Task<bool> CheckCourseContentId(string ccId);
+        Task<string> GetCourseVersionDetailIdByCcId(string ccId);
+        Task<CourseContent> GetCourseContentByCcId(string ccId);
+        Task<List<string>> GetCourseContentIdByCourseId(string courseVersionDetailId);
+    }
+}

@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Common\MailTemplate\ApprovedMailNotification.html" />
+    <None Remove="Common\MailTemplate\ChangePasswordTemplate.html" />
+    <None Remove="Common\MailTemplate\CourseClosedNotification.html" />
+    <None Remove="Common\MailTemplate\MailConfirmation.html" />
+    <None Remove="Common\MailTemplate\RejectedMailNotification.html" />
+    <None Remove="Common\MailTemplate\ResetPasswordTemplate.html" />
+    <None Remove="Common\MailTemplate\test.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Common\MailTemplate\ApprovedMailNotification.html" />
+    <EmbeddedResource Include="Common\MailTemplate\ChangePasswordTemplate.html" />
+    <EmbeddedResource Include="Common\MailTemplate\CourseClosedNotification.html" />
+    <EmbeddedResource Include="Common\MailTemplate\MailConfirmation.html" />
+    <EmbeddedResource Include="Common\MailTemplate\RejectedMailNotification.html" />
+    <EmbeddedResource Include="Common\MailTemplate\ResetPasswordTemplate.html" />
+    <EmbeddedResource Include="Common\MailTemplate\test.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <PackageReference Include="ClosedXML" Version="0.102.2" />
+
+    <PackageReference Include="EnterpriseLibrary.ExceptionHandling" Version="6.0.1304" />
+
+    <PackageReference Include="FirebaseAdmin" Version="3.0.0" />
+
+    <PackageReference Include="Google.Apis.Auth" Version="1.68.0" />
+
+    <PackageReference Include="Google.Cloud.Storage.V1" Version="4.10.0" />
+
+    <PackageReference Include="Hangfire" Version="1.8.14" />
+
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.14" />
+
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
+
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cursus_Data\Cursus_Data.csproj" />
+  </ItemGroup>
+
+</Project>
